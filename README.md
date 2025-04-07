@@ -37,24 +37,24 @@ Options:
 Example: paybin -u A,28 -r 76910408 -o output.bin
          paybin -v -u A,28 -rx "\x76\x91\x04\x08" -o output.bin
 ```
-```bash
-$ paybin -u "A,28" -r "08049182" -u "A,4" -u "B,4" -u "C,4" -v -o payload.bin
 
-Payload written to payload.bin (44 bytes)
-Payload length: 44 bytes
-Hex view: 4141414141414141414141414141414141414141414141414141414182910408414141414242424243434343
-ASCII view: AAAAAAAAAAAAAAAAAAAAAAAAAAAA....AAAABBBBCCCC
-Bytes view: b'\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x82\x91\x04\x08\x41\x41\x41\x41\x42\x42\x42\x42\x43\x43\x43\x43'
+```bash
+$ paybin -u "A,4" -r "08049182" -u "A,4" -u "B,4" -u "C,4" -v -o payload.bin         
+Payload written to payload.bin (20 bytes)
+Payload length: 20 bytes
+Hex view: 4141414182910408414141414242424243434343
+ASCII view: AAAA....AAAABBBBCCCC
+Bytes view: b'\x41\x41\x41\x41\x82\x91\x04\x08\x41\x41\x41\x41\x42\x42\x42\x42\x43\x43\x43\x43'
 ```
 
 ```bash
-$ paybin -u "A,28" -r "08049182" -u "A,4" -r "deadbeef" -r "c0debabe" -v -o payload.bin
-
-Payload written to payload.bin (44 bytes)
-Payload length: 44 bytes
-Hex view: 414141414141414141414141414141414141414141414141414141418291040841414141efbeaddebebadec0
-ASCII view: AAAAAAAAAAAAAAAAAAAAAAAAAAAA....AAAA........
-Bytes view: b'\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x41\x82\x91\x04\x08\x41\x41\x41\x41\xef\xbe\xad\xde\xbe\xba\xde\xc0'
+$ paybin -u "A,4" -r "08049182" -u "A,4" -r "deadbeef" -r "c0debabe" -v -o payload.bin
+Payload written to payload.bin (20 bytes)
+Payload length: 20 bytes
+Hex view: 414141418291040841414141efbeaddebebadec0
+ASCII view: AAAA....AAAA........
+Bytes view: b'\x41\x41\x41\x41\x82\x91\x04\x08\x41\x41\x41\x41\xef\xbe\xad\xde\xbe\xba\xde\xc0'
+elz@Vx00 /share/utils % 
 ```
 
 ### addbin.py
